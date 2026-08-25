@@ -333,7 +333,7 @@ if __name__ == "__main__":
     HEATMAP_VMAX = config.tce.HEATMAP_VMAX
 
     all_species_delta['Leading_RTS'].clear()
-    file_pairs = scan_folder(target_folder)
+    file_pairs = scan_folder(input_folder)
     if not file_pairs:
         logging.critical(f"No matched files in {input_folder}!")
         exit(1)
