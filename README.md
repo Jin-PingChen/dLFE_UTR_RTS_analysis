@@ -7,15 +7,15 @@ This pipeline identifies the 5'-UTR and 5'-cds regions of UTNI gene, TeRe gene, 
 # Project Structure   
 
 dLFE_UTR_RTS_analysis/  
-├── README.md                     # Documentation and usage guide  
-├── config.py                     # Global configuration: file paths, window-parameters, plotting styles  
-├── codon_randomization.py        # Synonymous-codon permutation for CDS, nucleotide permutation for UTR 
-├── rnafold_vienna.py             # Wrapper for Vienna RNA RNAfold to compute local free energy (LFE)  
-├── core_extract_allgene.py       # Core gene identification logic for UTNI-gene/Leading-gene/TeRe-gene  
-├── utils_dlfe.py                 # Utility toolkit: gff/fasta parsing, sequence extraction, ΔLFE computation, plotting routines  
-├── run_dLFE_allgene.py           # Main entry script: batch UTNI-gene/Leading-gene/TeRe-gene multispecies TCE analysis  
-├── run_dLFE_allleadgeneRTS.py    # Independent entry script: Leading-RTS analysis (stop-codon-side 3'CDS-3'UTR)  
-└── test_genome/                  # Input directory: stores paired `*.fasta` genome and `*.gff3` annotation files  
+├── README.md                     # Documentation and usage guide    
+├── config.py                     # Global configuration: file paths, window-parameters, plotting styles    
+├── codon_randomization.py        # Synonymous-codon permutation for CDS, nucleotide permutation for UTR     
+├── rnafold_vienna.py             # Wrapper for Vienna RNA RNAfold to compute local free energy (LFE)    
+├── core_extract_allgene.py       # Core gene identification logic for UTNI-gene/Leading-gene/TeRe-gene    
+├── utils_dlfe.py                 # Utility toolkit: gff/fasta parsing, sequence extraction, ΔLFE computation, plotting routines    
+├── run_dLFE_allgene.py           # Main entry script: batch UTNI-gene/Leading-gene/TeRe-gene multispecies TCE analysis    
+├── run_dLFE_allleadgeneRTS.py    # Independent entry script: Leading-RTS analysis (stop-codon-side 3'CDS-3'UTR)    
+└── test_genome/                  # Input directory: stores paired `*.fasta` genome and `*.gff3` annotation files    
   
 # Environment Setup  
 
