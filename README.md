@@ -6,7 +6,7 @@ This pipeline identifies the 5'-UTR/-CDS regions for all UTNI gene, TeRe gene, a
 
 # Project Structure   
 
-dLFE_UTR_RTS_analysis/
+dLFE_UTR_RTS_analysis/  
 ├── README.md                     # Documentation and usage guide  
 ├── config.py                     # Global configuration: paths, thresholds, window params, plotting styles  
 ├── codon_randomization.py        # Synonymous-codon permutation for CDS, nucleotide permutation for UTR  
