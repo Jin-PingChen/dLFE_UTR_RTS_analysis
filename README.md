@@ -6,17 +6,24 @@ This pipeline identifies the 5'-UTR/-CDS regions for all UTNI gene, TeRe gene, a
 
 # Project Structure   
 
-dLFE_UTR_RTS_analysis/  
-├── README.md                     # Documentation and usage guide    
-├── config.py                     # Global configuration: file paths, window-parameters, plotting styles    
-├── codon_randomization.py        # Synonymous-codon permutation for CDS, nucleotide permutation for UTR     
-├── rnafold_vienna.py             # Wrapper for Vienna RNA RNAfold to compute local free energy (LFE)    
-├── core_extract_allgene.py       # Core gene identification logic for UTNI-gene/Leading-gene/TeRe-gene    
-├── utils_dlfe.py                 # Utility toolkit: gff/fasta parsing, sequence extraction, ΔLFE computation, plotting routines    
-├── run_dLFE_allgene.py           # Main entry script: batch UTNI-gene/Leading-gene/TeRe-gene multispecies TCE analysis    
-├── run_dLFE_allleadgeneRTS.py    # Independent entry script: Leading-RTS analysis (stop-codon-side 3'CDS-3'UTR)    
-└── test_genome/                  # Input directory: stores paired `*.fasta` genome and `*.gff3` annotation files    
-  
+dLFE_UTR_RTS_analysis/
+├── README.md                     # Documentation and usage guide  
+├── config.py                     # Global configuration: paths, thresholds, window params, plotting styles  
+├── codon_randomization.py        # Synonymous-codon permutation for CDS, nucleotide permutation for UTR  
+├── local_cache.py                # SQLite-based persistent key-value cache  
+├── data_helpers.py               # Helper functions for data loading and processing  
+├── genome_model.py               # Genome structure models and gene interval handling  
+├── gff.py                        # GFF/GTF file parsing and gene annotation extraction  
+├── odb4.py                       # Database utilities for OrthoDB integration  
+├── mysql_mafold.py               # MySQL/MAFold database connection utilities  
+├── nucleic_compress.py           # Nucleic acid sequence compression and encoding  
+├── rnafold_vienna.py             # ViennaRNA RNAfold wrapper for LFE computation  
+├── core_extract_allgene.py       # Core gene identification: UTNI/Leading/TeRe  
+├── utils_dlfe.py                 # Utility functions: GFF/FASTA parsing, ΔLFE computation, plotting  
+├── run_dLFE_allgene.py           # Main entry: batch multi-species TCE analysis  
+├── run_dLFE_allleadgeneRTS.py    # Leading-RTS analysis (stop-codon side 3'CDS-3'UTR)  
+└── test_genome/                  # Input directory: paired *.fasta and *.gff3 files  
+   
 # Environment Setup  
 
 For the convenience of researchers seeking seamless utilization, we have adhered to all environmental configurations as previously established in Michael Peeri's released RTS analysis toolkit (https://github.com/michaelpeeri/rnafold-rts-public).    
